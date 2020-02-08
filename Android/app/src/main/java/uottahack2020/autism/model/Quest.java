@@ -1,6 +1,6 @@
 package uottahack2020.autism.model;
 
-interface Quest {
+public interface Quest {
 
     ActionPoint[] getActionPoints();
 }

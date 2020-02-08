@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-abstract class Story implements Roadblock {
+public abstract class Story implements Roadblock {
     private Emoji avatar;
     private String situationText;
     private List<Option> options;
 
     private Option selectedOption;
 
-    Story(Emoji avatar, String situationText, Option... options) {
+    protected Story(Emoji avatar, String situationText, Option... options) {
         this.avatar = avatar;
         this.situationText = situationText;
         this.options = new ArrayList<>(Arrays.asList(options));

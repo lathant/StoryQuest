@@ -2,7 +2,7 @@ package uottahack2020.autism.model;
 
 import uottahack2020.autism.fragment.FragmentId;
 
-interface Roadblock {
+public interface Roadblock {
 
     FragmentId getFragmentId();
 

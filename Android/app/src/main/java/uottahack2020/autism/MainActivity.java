@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import uottahack2020.autism.fragment.Fragment;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.fragment.FragmentId;
+import uottahack2020.autism.fragment.QuestFragment;
 
 public class MainActivity extends FragmentActivity {
     public static final String TAG = "MainActivity";
@@ -23,9 +24,9 @@ public class MainActivity extends FragmentActivity {
 
         Log.d(TAG, "Launching");
 
-//        FeedFragment.setupId(getActivityId());
+        QuestFragment.setupId(getActivityId());
 
-//        pushFragment(FragmentId.GET(FeedFragment.TAG));
+        pushFragment(FragmentId.GET(QuestFragment.TAG));
     }
 
     @Override

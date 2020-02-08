@@ -1,4 +1,5 @@
 package uottahack2020.autism.model;
 
-enum Emoji {
+public enum Emoji {
+    HAPPY_FACE
 }
