@@ -1,15 +1,31 @@
 package uottahack2020.autism.model;
 
+import uottahack2020.autism.ActivityId;
 import uottahack2020.autism.fragment.FragmentId;
 
-public interface Roadblock {
+public abstract class Roadblock {
+    private String situationText;
+    protected boolean completed;
 
-    FragmentId getFragmentId();
+    Roadblock(String situationText) {
+        this.situationText = situationText;
+    }
 
-    String getName();
+    public abstract FragmentId getFragmentId(ActivityId activityId);
 
-    String getDescription();
+    public abstract String getName();
 
-    boolean isComplete();
+    public abstract String getDescription();
 
+    public String getSituationText() {
+        return situationText;
+    }
+
+    public boolean isComplete() {
+        return completed;
+    }
+
+    public void forceComplete() {
+        completed = true;
+    }
 }

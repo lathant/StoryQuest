@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PUZZLE GOES HERE"
+            android:answer="PUZZLE GOES HERE"
             android:textAlignment="center"
             android:textSize="30sp" />
 

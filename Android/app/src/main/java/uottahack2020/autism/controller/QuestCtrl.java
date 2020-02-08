@@ -30,39 +30,6 @@ public class QuestCtrl implements FragmentCtrl {
     }
 
     private static Quest setupQuest() {
-        Story story = new Story(Emoji.HAPPY_FACE, "No situation") {
-            @Override
-            public FragmentId getFragmentId() {
-                return null;
-            }
-
-            @Override
-            public String getName() {
-                return "A Story";
-            }
-
-            @Override
-            public String getDescription() {
-                return "This is a test story";
-            }
-
-            @Override
-            public boolean isComplete() {
-                return false;
-            }
-        };
-        return () -> new ActionPoint[] {
-                new ActionPoint() {
-                    @Override
-                    public Roadblock getRoadBlock() {
-                        return story;
-                    }
-
-                    @Override
-                    public boolean isCompleted() {
-                        return story.isComplete();
-                    }
-                }
-        };
+        return null;
     }
 }
