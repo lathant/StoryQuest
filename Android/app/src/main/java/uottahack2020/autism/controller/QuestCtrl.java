@@ -22,16 +22,14 @@ public class QuestCtrl implements FragmentCtrl {
     @Override
     public void init(View view) {
         view.findViewById(R.id.quest_btnPuzzle1).setOnClickListener(v -> {
-            activity.pushFragment(FragmentId.GET(StoryFragment.TAG));
-            overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
+            activity.pushFragment(FragmentId.GET(StoryFragment.TAG), R.anim.trans_bottom_in, R.anim.trans_top_out, R.anim.trans_top_in, R.anim.trans_bottom_out);
         });
         view.findViewById(R.id.quest_btnPuzzle2).setOnClickListener(v -> {
-            activity.pushFragment(FragmentId.GET(ConversationFragment.TAG));
-            overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
+            activity.pushFragment(FragmentId.GET(ConversationFragment.TAG), R.anim.trans_bottom_in, R.anim.trans_top_out, R.anim.trans_top_in, R.anim.trans_bottom_out);
         });
         view.findViewById(R.id.quest_btnPuzzle3).setOnClickListener(v -> {
 //          activity.pushFragment(FragmentId.GET(ConversationFragment.TAG));
-            overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
+//            activity.overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
         });
 
         quest.init();

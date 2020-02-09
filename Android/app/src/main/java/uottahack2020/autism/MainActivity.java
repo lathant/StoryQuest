@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.ProgressBar;
 
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import uottahack2020.autism.fragment.ConversationFragment;
 import uottahack2020.autism.fragment.Fragment;
 import uottahack2020.autism.fragment.FragmentActivity;
@@ -41,7 +42,7 @@ public class MainActivity extends FragmentActivity {
 
         Session.CURRENT_QUEST = defaultQuest;
 
-        pushFragment(FragmentId.GET(QuestFragment.TAG));
+        pushFragment(FragmentId.GET(QuestFragment.TAG), R.anim.trans_top_in, R.anim.trans_bottom_out, R.anim.trans_top_in, R.anim.trans_bottom_out);
     }
 
     @Override
@@ -59,10 +60,13 @@ public class MainActivity extends FragmentActivity {
             return;
         }
         fragmentStack.push(fragment);
-        fragmentManager.beginTransaction()
-                .replace(FRAGMENT_ID, currentFragment())
-                .addToBackStack(String.valueOf(fragmentId))
-                .commit();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+
+        System.out.println("TRANSITIONS " + (int) args[0] + " " + (int) args[1]);
+
+        ft.setCustomAnimations((int) args[0], (int) args[1], (int) args[2], (int) args[3]);
+
+        ft.replace(FRAGMENT_ID, currentFragment()).addToBackStack(String.valueOf(fragmentId)).commit();
     }
 
     @Override

@@ -134,6 +134,7 @@ public class ConversationCtrl implements FragmentCtrl {
             txtSituation.setText(conversation.getCurrentQuestion().getText());
         } else {
             activity.popFragment(FragmentId.GET(ConversationFragment.TAG));
+            activity.overridePendingTransition(R.anim.trans_top_in, R.anim.trans_bottom_out);
             return;
         }
 

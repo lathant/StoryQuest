@@ -79,7 +79,7 @@ public class StoryCtrl implements FragmentCtrl {
         } else {
             option.getStory().forceComplete();
             activity.popFragment(FragmentId.GET(StoryFragment.TAG));
-            overridePendingTransition(R.anim.trans_top_in, R.anim.trans_bottom_out);
+            activity.overridePendingTransition(R.anim.trans_top_in, R.anim.trans_bottom_out);
         }
         updateInfo();
     }

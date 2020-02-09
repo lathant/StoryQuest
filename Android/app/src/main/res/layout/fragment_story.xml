@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +19,6 @@
             android:id="@+id/story_txtEmoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
             android:textSize="65dp"
             tools:text="😃" />
 
@@ -40,57 +41,67 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="horizontal">
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center_horizontal|center_vertical"-->
+        <!--            android:orientation="horizontal">-->
 
-            <Button
-                android:id="@+id/story_btnOption1"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:background="@color/colorAccent"
-                android:textSize="24sp"
-                tools:text="Upset" />
+        <!--        </LinearLayout>-->
 
-            <Button
-                android:id="@+id/story_btnOption2"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:background="@color/colorPrimary"
-                android:textSize="24sp"
-                tools:text="Bored" />
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center_horizontal|center_vertical"-->
+        <!--            android:orientation="horizontal">-->
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/story_btnOption4"
+            android:layout_width="379dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorDivider"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Neutral" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="horizontal">
+        <Button
+            android:id="@+id/story_btnOption1"
+            android:layout_width="379dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorSecondaryLight"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Upset" />
 
-            <Button
-                android:id="@+id/story_btnOption3"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:background="@color/colorSecondaryLight"
-                android:textSize="24sp"
-                tools:text="Happy" />
+        <Button
+            android:id="@+id/story_btnOption2"
+            android:layout_width="379dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="#b9a3cc"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Bored" />
 
-            <Button
-                android:id="@+id/story_btnOption4"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:background="#66bb6a"
-                android:textSize="24sp"
-                tools:text="Neutral" />
+        <Button
+            android:id="@+id/story_btnOption3"
+            android:layout_width="379dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Happy" />
 
-        </LinearLayout>
+        <!--        </LinearLayout>-->
 
     </LinearLayout>
 
@@ -99,13 +110,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/colorIcon"
         android:padding="16dp">
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/colorBgDarker"
-            android:layout_marginBottom="20dp"/>
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -113,6 +126,7 @@
             android:text="Incorrect : Here's a hint"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
+            android:background="@color/colorIcon"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -120,6 +134,7 @@
             android:id="@+id/story_txtHint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorIcon"
             android:textSize="24sp"
             tools:text="His practice was not easy; so he was feeling positive after he won" />
 
