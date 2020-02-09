@@ -124,7 +124,10 @@ public class ConversationCtrl implements FragmentCtrl {
 
             editMessage.setEnabled(true);
         });
-
+        view.findViewById(R.id.conversation_btnExit).setOnClickListener(v -> {
+            activity.popFragment(FragmentId.GET(ConversationFragment.TAG));
+            activity.overridePendingTransition(R.anim.trans_top_in, R.anim.trans_bottom_out);
+        });
         conversation.setMarker(marker);
     }
 

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Splash extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 4000;
+    private static int SPLASH_TIME_OUT = 1000;
     private Button button;
     private ImageView image;
 
@@ -37,9 +37,6 @@ public class Splash extends AppCompatActivity {
                     overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
                 }
             });
-            Intent transIntent = new Intent(Splash.this, MainActivity.class);
-            startActivity(transIntent);
-            overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
         }, SPLASH_TIME_OUT);
 
 
