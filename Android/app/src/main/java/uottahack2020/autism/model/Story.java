@@ -10,6 +10,14 @@ public abstract class Story extends Roadblock {
 
     private Option selectedOption;
 
+    public Option getSelectedOption() {
+        return selectedOption;
+    }
+
+    public void setSelectedOption(Option selectedOption) {
+        this.selectedOption = selectedOption;
+    }
+
     protected Story(String situationText, Emoji avatar, Option... options) {
         super(situationText);
         this.avatar = avatar;
@@ -24,7 +32,7 @@ public abstract class Story extends Roadblock {
         return options;
     }
 
-    public class Option {
+    public static class Option {
         private boolean visible;
         private boolean isCorrect;
         private String text;
@@ -36,13 +44,16 @@ public abstract class Story extends Roadblock {
             this.reasoning = reasoning;
         }
 
-        public boolean isSelected() {
-            return selectedOption == this;
+        public boolean isVisible() {
+            return visible;
         }
 
-        public boolean select() {
-            selectedOption = this;
+        public boolean isCorrect() {
             return isCorrect;
+        }
+
+        public String getText() {
+            return text;
         }
 
         public String getReasoning() {

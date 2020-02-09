@@ -19,12 +19,12 @@ public final class RecyclerAdapter<T extends RecyclerCard> extends RecyclerView.
     private List<T> cards;
     private int lastPosition = -1;
 
-    public RecyclerAdapter(Context context, List<T> cards, int layoutId, int cardViewId, int animationId) {
+    public RecyclerAdapter(Context context, List<T> cards, int layoutId, int animationId) {
         this.context = context;
         this.cards = cards;
-        this.cardViewSelector = new CardViewSelector() {
+        this.cardViewSelector = new CardViewSelector<T>() {
             @Override
-            public int getItemViewType(RecyclerCard card) {
+            public int getItemViewType(T card) {
                 return 0;
             }
 
@@ -32,21 +32,14 @@ public final class RecyclerAdapter<T extends RecyclerCard> extends RecyclerView.
             public int getViewLayoutId(int itemViewType) {
                 return layoutId;
             }
-
-            @Override
-            public int getCardViewId(int itemViewType) {
-                return cardViewId;
-            }
         };
         this.animationId = animationId;
     }
 
-    public interface CardViewSelector {
-        int getItemViewType(RecyclerCard card);
+    public interface CardViewSelector<T extends RecyclerCard> {
+        int getItemViewType(T card);
 
         int getViewLayoutId(int itemViewType);
-
-        int getCardViewId(int itemViewType);
     }
 
     private class CardViewHolder extends RecyclerView.ViewHolder {
@@ -60,8 +53,6 @@ public final class RecyclerAdapter<T extends RecyclerCard> extends RecyclerView.
 
         void setCard(RecyclerCard card) {
             this.card = card;
-//            View cv = itemView.findViewById(
-//                    cardViewSelector.getCardViewId(cardViewSelector.getItemViewType(card)));
             this.card.attachLayoutViews(itemView);
         }
 
@@ -75,6 +66,7 @@ public final class RecyclerAdapter<T extends RecyclerCard> extends RecyclerView.
         return cards.size();
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public int getItemViewType(int position) {
         return cardViewSelector.getItemViewType(cards.get(position));

@@ -5,4 +5,6 @@ public interface Quest {
     void init();
 
     ActionPoint[] getActionPoints();
+
+    ActionPoint currentActionPoint();
 }

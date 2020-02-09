@@ -7,10 +7,16 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import uottahack2020.autism.ActivityId;
 import uottahack2020.autism.MainActivity;
 import uottahack2020.autism.R;
+import uottahack2020.autism.Session;
 import uottahack2020.autism.controller.ConversationCtrl;
+import uottahack2020.autism.controller.RecyclerAdapter;
+import uottahack2020.autism.model.Conversation;
 
 public class ConversationFragment extends Fragment<ConversationCtrl> {
     public static final String TAG = "ConversationFragment";
@@ -32,11 +38,24 @@ public class ConversationFragment extends Fragment<ConversationCtrl> {
 
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        controller.setConversation((Conversation) Session.CURRENT_QUEST.currentActionPoint().getRoadBlock());
         controller.init(view);
+
+        RecyclerView chatsRecycler = view.findViewById(R.id.conversation_recyclerView);
+        chatsRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        chatsRecycler.setItemAnimator(new DefaultItemAnimator());
+
+        RecyclerAdapter adapter = new RecyclerAdapter(getContext(), controller.observableChatHistory,
+                R.layout.content_conversation_botbubble, R.anim.trans_fade_in);
+
+        chatsRecycler.setAdapter(adapter);
+        controller.setCardsAdapter(adapter);
+
         controller.updateInfo();
     }
 

@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.fragment.app.FragmentManager;
+import uottahack2020.autism.fragment.ConversationFragment;
 import uottahack2020.autism.fragment.Fragment;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.fragment.FragmentId;
 import uottahack2020.autism.fragment.QuestFragment;
+import uottahack2020.autism.model.DefaultQuest;
 
 public class MainActivity extends FragmentActivity {
     public static final String TAG = "MainActivity";
@@ -25,8 +27,14 @@ public class MainActivity extends FragmentActivity {
         Log.d(TAG, "Launching");
 
         QuestFragment.setupId(getActivityId());
+        ConversationFragment.setupId(getActivityId());
 
-        pushFragment(FragmentId.GET(QuestFragment.TAG));
+        DefaultQuest defaultQuest = new DefaultQuest();
+        defaultQuest.init();
+
+        Session.CURRENT_QUEST = defaultQuest;
+
+        pushFragment(FragmentId.GET(ConversationFragment.TAG));
     }
 
     @Override

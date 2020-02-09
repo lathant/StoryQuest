@@ -1,6 +1,7 @@
 package uottahack2020.autism.controller;
 
 import android.view.View;
+import android.widget.EditText;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -14,29 +15,81 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import uottahack2020.autism.R;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.model.Conversation;
 
 public class ConversationCtrl implements FragmentCtrl {
     private FragmentActivity activity;
     private Conversation conversation;
+    private RecyclerAdapter<ConversationBubble> cardsAdapter;
+
+    private EditText editMessage;
+
+    public List<ConversationBubble> observableChatHistory;
 
     public ConversationCtrl(FragmentActivity activity) {
         this.activity = activity;
+        observableChatHistory = new ArrayList<>();
     }
 
     @Override
     public void init(View view) {
+        editMessage = view.findViewById(R.id.conversation_editMessage);
+        view.findViewById(R.id.conversation_btnSend).setOnClickListener(v -> {
+            editMessage.setEnabled(false);
+            conversation.markAnswer(editMessage.getText().toString());
+        });
 
+        conversation.setMarker(new Marker());
     }
 
     @Override
     public void updateInfo() {
-
+        if (conversation.pushCurrentQuestion()) {
+            editMessage.setEnabled(true);
+        }
+        observableChatHistory.clear();
+        for (Conversation.ChatItem chatItem : conversation.getChatHistory()) {
+            observableChatHistory.add(new ConversationBubble(
+                    chatItem.isHuman() ? ConversationBubble.CardType.HUMAN : ConversationBubble.CardType.BOT,
+                    chatItem,
+                    activity));
+        }
+        cardsAdapter.notifyDataSetChanged();
     }
 
     public void setConversation(Conversation conversation) {
         this.conversation = conversation;
+    }
+
+    public void setCardsAdapter(RecyclerAdapter<ConversationBubble> cardsAdapter) {
+        cardsAdapter.setCardViewSelector(new RecyclerAdapter.CardViewSelector<ConversationBubble>() {
+            @Override
+            public int getItemViewType(ConversationBubble card) {
+                switch (card.getType()) {
+                    case BOT:
+                        return 0;
+                    case HUMAN:
+                        return 1;
+                    default:
+                        return -1;
+                }
+            }
+
+            @Override
+            public int getViewLayoutId(int itemViewType) {
+                switch (itemViewType) {
+                    case 0:
+                        return R.layout.content_conversation_botbubble;
+                    case 1:
+                        return R.layout.content_conversation_humanbubble;
+                    default:
+                        return -1;
+                }
+            }
+        });
+        this.cardsAdapter = cardsAdapter;
     }
 
     private class Marker implements Conversation.Marker {
@@ -46,7 +99,7 @@ public class ConversationCtrl implements FragmentCtrl {
             queue = Volley.newRequestQueue(activity);
         }
 
-        public boolean markAnswer(Conversation.Question question, String answer) {
+        public synchronized boolean markAnswer(Conversation.Question question, String answer) {
             Task task = new Task(answer);
             Thread taskThread = new Thread(task);
             taskThread.start();

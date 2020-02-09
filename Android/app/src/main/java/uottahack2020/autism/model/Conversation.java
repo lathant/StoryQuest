@@ -1,9 +1,13 @@
 package uottahack2020.autism.model;
 
+import java.util.Stack;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import uottahack2020.autism.ActivityId;
 import uottahack2020.autism.fragment.ConversationFragment;
 import uottahack2020.autism.fragment.FragmentId;
+import uottahack2020.autism.util.Observable;
 
 public abstract class Conversation extends Roadblock {
     private static final String[] RESPONSES_TO_CORRECT = new String[]{
@@ -20,6 +24,7 @@ public abstract class Conversation extends Roadblock {
     private Question[] questions;
     private int currentQuestion;
     private Marker marker;
+    private Stack<ChatItem> chatHistory;
 
     Conversation(String situationText, Question... questions) {
         super(situationText);
@@ -28,6 +33,7 @@ public abstract class Conversation extends Roadblock {
         }
         this.questions = questions;
         currentQuestion = 0;
+        chatHistory = new Stack<>();
     }
 
     @Override
@@ -39,21 +45,39 @@ public abstract class Conversation extends Roadblock {
         return questions[currentQuestion];
     }
 
+    public boolean pushCurrentQuestion() {
+        ChatItem cur = new ChatItem(getCurrentQuestion().getText());
+        if (chatHistory.search(cur) ==  -1) {
+            chatHistory.push(cur);
+            return true;
+        }
+        return false;
+    }
+
+    public Stack<ChatItem> getChatHistory() {
+        return chatHistory;
+    }
+
     public void setMarker(Marker marker) {
         this.marker = marker;
     }
 
-    public String markAnswer(String answer) {
+    public ChatItem markAnswer(String answer) {
+        chatHistory.push(new ChatItem(answer));
+
         boolean correct = marker.markAnswer(getCurrentQuestion(), answer);
+        String response;
 
         if (correct) {
             if (++currentQuestion >= questions.length) {
                 completed = true;
             }
-            return RESPONSES_TO_CORRECT[(int) (Math.random() * RESPONSES_TO_CORRECT.length)];
+            response = RESPONSES_TO_CORRECT[(int) (Math.random() * RESPONSES_TO_CORRECT.length)];
         } else {
-            return RESPONSES_TO_INCORRECT[(int) (Math.random() * RESPONSES_TO_INCORRECT.length)];
+            response = RESPONSES_TO_INCORRECT[(int) (Math.random() * RESPONSES_TO_INCORRECT.length)];
         }
+
+        return chatHistory.push(new ChatItem(response));
     }
 
     public static class Question {
@@ -128,5 +152,33 @@ public abstract class Conversation extends Roadblock {
 
     public interface Marker {
         boolean markAnswer(Question question, String answer);
+    }
+
+    public class ChatItem implements Observable {
+        private String text;
+        private boolean isHuman;
+
+        private ChatItem(String text) {
+            this.text = text;
+        }
+
+        @Override
+        public String getText() {
+            return text;
+        }
+
+        public boolean isHuman() {
+            return isHuman;
+        }
+
+        @Override
+        public boolean equals(@Nullable Object obj) {
+            if (obj instanceof ChatItem) {
+                ChatItem item = (ChatItem) obj;
+                return text.equals(item.text) && isHuman == item.isHuman;
+            } else {
+                return super.equals(obj);
+            }
+        }
     }
 }
