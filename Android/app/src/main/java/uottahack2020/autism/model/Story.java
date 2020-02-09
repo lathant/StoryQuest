@@ -27,10 +27,12 @@ public abstract class Story extends Roadblock {
     public class Option {
         private boolean visible;
         private boolean isCorrect;
+        private String text;
         private String reasoning;
 
-        private Option(boolean isCorrect, String reasoning) {
+        Option(boolean isCorrect, String text, String reasoning) {
             this.isCorrect = isCorrect;
+            this.text = text;
             this.reasoning = reasoning;
         }
 

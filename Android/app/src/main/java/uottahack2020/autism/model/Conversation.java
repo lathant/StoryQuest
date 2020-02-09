@@ -1,5 +1,6 @@
 package uottahack2020.autism.model;
 
+import androidx.annotation.NonNull;
 import uottahack2020.autism.ActivityId;
 import uottahack2020.autism.fragment.ConversationFragment;
 import uottahack2020.autism.fragment.FragmentId;
@@ -57,18 +58,39 @@ public abstract class Conversation extends Roadblock {
 
     public static class Question {
         private String text;
-        private Emotion targetEmotion;
+        private String prompt;
+        @NonNull
+        private Emotion[] targetEmotions;
+        @NonNull
         private String[] targetThemes;
         private int minMatchingThemes;
 
-        public Question(String text, int minMatchingThemes, String... targetThemes) {
+        public Question(String text, String prompt, @NonNull Emotion[] targetEmotions) {
             this.text = text;
+            this.prompt = prompt;
+            this.targetEmotions = targetEmotions;
+            this.minMatchingThemes = 0;
+            this.targetThemes = new String[0];
+        }
+
+        public Question(String text, String prompt, @NonNull Emotion[] targetEmotions, int minMatchingThemes, @NonNull String[] targetThemes) {
+            this.text = text;
+            this.prompt = prompt;
+            this.targetEmotions = targetEmotions;
             this.minMatchingThemes = minMatchingThemes;
             this.targetThemes = targetThemes;
         }
 
-        public Emotion getTargetEmotion() {
-            return targetEmotion;
+        public String getText() {
+            return text;
+        }
+
+        public String getPrompt() {
+            return prompt;
+        }
+
+        public Emotion[] getTargetEmotions() {
+            return targetEmotions;
         }
 
         public String[] getTargetThemes() {

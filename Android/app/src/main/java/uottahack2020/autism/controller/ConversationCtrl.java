@@ -66,7 +66,7 @@ public class ConversationCtrl implements FragmentCtrl {
             themes.addAll(Arrays.asList(analysis[2].split(",")));
 
             // if not passed emotion requirement
-            if (!(question.getTargetEmotion() == null || emotion == question.getTargetEmotion())) {
+            if (!(question.getTargetEmotions().length == 0 || Arrays.asList(question.getTargetEmotions()).contains(emotion))) {
                 return false;
             }
 
@@ -98,7 +98,8 @@ public class ConversationCtrl implements FragmentCtrl {
             public void run() {
                 String uri;
                 try {
-                    uri = "http://storyquest.space/?text=" + URLEncoder.encode(answer, "UTF-8");
+                    //http://storyquest.space/
+                    uri = "https://uottahack-autism.appspot.com/?text=" + URLEncoder.encode(answer, "UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                     complete = true;
