@@ -14,15 +14,7 @@ public class DefaultQuest implements Quest {
 
     public void init() {
         Conversation conversation1 = new Conversation(
-                "Someone at school has lost their toy. Put your empathy skill to the test!",
-                new Conversation.Question(
-                        "Hi, I lost my toy at recess today.",
-                        "How can you respond?",
-                        new Conversation.Question.Emotion[]{
-                                Conversation.Question.Emotion.CLEARLY_POSITIVE,
-                                Conversation.Question.Emotion.MILDLY_POSITIVE,
-                                Conversation.Question.Emotion.POSITIVE
-                        })) {
+                "Someone at school has lost their toy. Put your empathy skill to the test!") {
             @Override
             public String getName() {
                 return "The Lost Toy";
@@ -33,6 +25,17 @@ public class DefaultQuest implements Quest {
                 return "Sometimes others need a little support";
             }
         };
+
+        conversation1.setQuestions(new Conversation.Question(
+                conversation1,
+                "Hi, I lost my toy at recess today.",
+                "How can you respond?",
+                new Conversation.Question.Emotion[]{
+                        Conversation.Question.Emotion.CLEARLY_POSITIVE,
+                        Conversation.Question.Emotion.MILDLY_POSITIVE,
+                        Conversation.Question.Emotion.POSITIVE,
+                        Conversation.Question.Emotion.NEUTRAL
+                }));
 
         Story story1 = new Story(
                 "Billy practiced for his race for a month. " +

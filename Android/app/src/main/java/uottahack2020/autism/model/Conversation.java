@@ -23,17 +23,19 @@ public abstract class Conversation extends Roadblock {
 
     private Question[] questions;
     private int currentQuestion;
-    private Marker marker;
     private Stack<ChatItem> chatHistory;
 
-    Conversation(String situationText, Question... questions) {
+    Conversation(String situationText) {
         super(situationText);
+        currentQuestion = 0;
+        chatHistory = new Stack<>();
+    }
+
+    public void setQuestions(Question... questions) {
         if (questions.length == 0) {
             throw new RuntimeException("You must provide at least 1 question");
         }
         this.questions = questions;
-        currentQuestion = 0;
-        chatHistory = new Stack<>();
     }
 
     @Override
@@ -46,7 +48,7 @@ public abstract class Conversation extends Roadblock {
     }
 
     public boolean pushCurrentQuestion() {
-        ChatItem cur = new ChatItem(getCurrentQuestion().getText());
+        ChatItem cur = new ChatItem(getCurrentQuestion().getText(), false);
         if (chatHistory.search(cur) ==  -1) {
             chatHistory.push(cur);
             return true;
@@ -59,16 +61,13 @@ public abstract class Conversation extends Roadblock {
     }
 
     public void setMarker(Marker marker) {
-        this.marker = marker;
     }
 
-    public ChatItem markAnswer(String answer) {
-        chatHistory.push(new ChatItem(answer));
+    public void notifyAnswer(String answer, boolean isCorrect) {
+        chatHistory.push(new ChatItem(answer, true));
 
-        boolean correct = marker.markAnswer(getCurrentQuestion(), answer);
         String response;
-
-        if (correct) {
+        if (isCorrect) {
             if (++currentQuestion >= questions.length) {
                 completed = true;
             }
@@ -77,10 +76,11 @@ public abstract class Conversation extends Roadblock {
             response = RESPONSES_TO_INCORRECT[(int) (Math.random() * RESPONSES_TO_INCORRECT.length)];
         }
 
-        return chatHistory.push(new ChatItem(response));
+        chatHistory.push(new ChatItem(response, false));
     }
 
     public static class Question {
+        private Conversation conversation;
         private String text;
         private String prompt;
         @NonNull
@@ -89,7 +89,8 @@ public abstract class Conversation extends Roadblock {
         private String[] targetThemes;
         private int minMatchingThemes;
 
-        public Question(String text, String prompt, @NonNull Emotion[] targetEmotions) {
+        public Question(Conversation conversation, String text, String prompt, @NonNull Emotion[] targetEmotions) {
+            this.conversation = conversation;
             this.text = text;
             this.prompt = prompt;
             this.targetEmotions = targetEmotions;
@@ -125,6 +126,10 @@ public abstract class Conversation extends Roadblock {
             return minMatchingThemes;
         }
 
+        public Conversation getConversation() {
+            return conversation;
+        }
+
         public enum Emotion {
             CLEARLY_POSITIVE("positive+"),
             POSITIVE("positive"),
@@ -151,14 +156,14 @@ public abstract class Conversation extends Roadblock {
     }
 
     public interface Marker {
-        boolean markAnswer(Question question, String answer);
+        void markAnswer(Question question, String answer);
     }
 
     public class ChatItem implements Observable {
         private String text;
         private boolean isHuman;
 
-        private ChatItem(String text) {
+        private ChatItem(String text, boolean isHuman) {
             this.text = text;
         }
 

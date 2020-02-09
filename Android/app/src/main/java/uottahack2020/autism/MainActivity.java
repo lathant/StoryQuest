@@ -34,6 +34,7 @@ public class MainActivity extends FragmentActivity {
 
         Session.CURRENT_QUEST = defaultQuest;
 
+        pushFragment(FragmentId.GET(QuestFragment.TAG));
         pushFragment(FragmentId.GET(ConversationFragment.TAG));
     }
 

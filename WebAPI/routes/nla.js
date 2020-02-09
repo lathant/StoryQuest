@@ -12,7 +12,7 @@ router.get("/", function(req, res, next) {
     .then(result => res.send(result.join("|")))
     .catch(err => {
       console.error(err);
-      res.sendStatus(500);
+      res.status(500).send(err);
     });
 });
 
@@ -138,37 +138,37 @@ async function analyzeSentiment(client, document) {
   // sentiment magnitude is the 'magnitude' of the emotion, greater numbers = stronger emotion
   console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
 
-  return sentiment.score * sentiment.magnitude;
+  return sentiment.score * (sentiment.magnitude + 1);
 }
 
 function parseSentimentRatio(ratio) {
   /**
    *      Theme           score   magnitude    ratio (score*magnitude||1)
-   * Clearly positive     0.8     3        >=  1
-   * positive             0.8     3        <   1
-   *                      0.4     1.5      >=  0.6
-   * Mildly-positive      0.4     1.5      <   0.6
-   *                      0.2     1.5      >=  0.4
-   * neutral              0.2     1.5      <   0.4
-   *                      0.1     1        >= -0.4
-   * Mildly-negative      0.1     1        <  -0.4
-   *                     -0.3     1.5      >= -1
-   * Negative            -0.3     1.5      <  -1
-   *                     -0.6     3        >= -1.5
-   * Clearly Negative    -0.6     3        <  -1.5
+   * Clearly positive     0.8     3        >=  1.15
+   * positive             0.8     3        <   1.15
+   *                      0.4     1.5      >=  0.8
+   * Mildly-positive      0.4     1.5      <   0.8
+   *                      0.2     1.5      >=  0.3
+   * neutral              0.2     1.5      <   0.3
+   *                      0.1     1        >= -0.1
+   * Mildly-negative      0.1     1        <  -0.1
+   *                     -0.3     1.5      >= -0.4
+   * Negative            -0.3     1.5      <  -0.4
+   *                     -0.6     3        >= -0.9
+   * Clearly Negative    -0.6     3        <  -0.9
    */
 
-  if (ratio >= 1) {
+  if (ratio >= 1.15) {
     return "positive+";
-  } else if (ratio >= 0.6) {
+  } else if (ratio >= 0.8) {
     return "positive";
-  } else if (ratio >= 0.4) {
+  } else if (ratio >= 0.3) {
     return "positive-";
-  } else if (ratio >= -0.4) {
+  } else if (ratio >= -0.1) {
     return "neutral";
-  } else if (ratio >= -1) {
+  } else if (ratio >= -0.4) {
     return "negative-";
-  } else if (ratio >= -1.5) {
+  } else if (ratio >= -0.9) {
     return "negative";
   } else {
     return "negative+";
