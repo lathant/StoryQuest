@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgDarker"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/story_txtEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="65dp"
+            tools:text="😃" />
+
+        <TextView
+            android:id="@+id/story_txtSituation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            tools:text="Billy practiced for his race for a month. Today, he won an award for 1st place. How does Billy feel?" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center_horizontal|center_vertical"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center_horizontal|center_vertical"-->
+        <!--            android:orientation="horizontal">-->
+
+        <Button
+            android:id="@+id/story_btnOption4"
+            android:layout_width="379dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorDivider"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Neutral" />
+
+        <Button
+            android:id="@+id/story_btnOption1"
+            android:layout_width="379"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorSecondaryLight"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Upset" />
+
+        <Button
+            android:id="@+id/story_btnOption2"
+            android:layout_width="379"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="#b9a3cc"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Bored" />
+
+        <Button
+            android:id="@+id/story_btnOption3"
+            android:layout_width="379"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+            android:textSize="24sp"
+            tools:text="Happy" />
+
+        <!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/story_panelHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorIcon"
+        android:padding="16dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBgDarker"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect : Here's a hint"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/colorIcon"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/story_txtHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorIcon"
+            android:textSize="24sp"
+            tools:text="His practice was not easy; so he was feeling positive after he won" />
+
+    </LinearLayout>
+
+</LinearLayout>
