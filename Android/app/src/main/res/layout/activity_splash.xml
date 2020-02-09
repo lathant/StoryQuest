@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorIcon"
+    android:background="#f8e9a1"
     android:padding="20dp">
 
+
+    <Button
+        android:id="@+id/splash_btnEnter"
+        android:layout_width="232dp"
+        android:layout_height="125dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="423dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="203dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/activity_enter"
+        android:text="Enter"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
+        android:id="@+id/logo"
+        android:layout_width="185dp"
+        android:layout_height="177dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="346dp"
+        android:gravity="center_horizontal"
         android:src="@mipmap/ic_launcher">
 
     </ImageView>
