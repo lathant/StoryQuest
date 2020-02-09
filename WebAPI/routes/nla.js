@@ -48,13 +48,19 @@ async function analyze(text) {
   let emotion = await parseSentimentRatio(sentimentRatio);
   console.log(`Result: ${emotion}`);
 
-  if (text.split(" ").length >= 3) {
-    let context = (await analyzeContext(client, document))
+  let context;
+  try {
+    context = (await analyzeContext(client, document))
       .map(c => `${c.name.replace("/", "")}`) //:${(c.confidence * 100).toFixed(1)
       .join(",");
+  } catch (error) {
+    context = "";
+  }
 
-    // Extract entities (and their salience) from the text
-    let entities = (await analyzeEntities(client, document))
+  // Extract entities (and their salience) from the text
+  let etities;
+  try {
+    entities = (await analyzeEntities(client, document))
       .reduce((acc, cur) => {
         let i = acc.findIndex(e => e[0] == cur.type);
         if (i < 0) {
@@ -66,12 +72,12 @@ async function analyze(text) {
       }, [])
       .map(eg => eg[0]) // eg.join(".")
       .join(",");
-    console.log(`Entities: ${entities}`);
-
-    return [emotion, context, entities];
-  } else {
-    return [emotion, "", ""];
+  } catch (error) {
+    entities = "";
   }
+  console.log(`Entities: ${entities}`);
+
+  return [emotion, context, entities];
 }
 
 /**
