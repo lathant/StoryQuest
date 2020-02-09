@@ -25,8 +25,8 @@ public abstract class Conversation extends Roadblock {
     private int currentQuestion;
     private Stack<ChatItem> chatHistory;
 
-    Conversation(String situationText) {
-        super(situationText);
+    Conversation(Quest quest, String situationText) {
+        super(quest, situationText);
         currentQuestion = 0;
         chatHistory = new Stack<>();
     }
@@ -69,7 +69,7 @@ public abstract class Conversation extends Roadblock {
         String response;
         if (isCorrect) {
             if (++currentQuestion >= questions.length) {
-                completed = true;
+                forceComplete();
             }
             response = RESPONSES_TO_CORRECT[(int) (Math.random() * RESPONSES_TO_CORRECT.length)];
         } else {
@@ -165,6 +165,7 @@ public abstract class Conversation extends Roadblock {
 
         private ChatItem(String text, boolean isHuman) {
             this.text = text;
+            this.isHuman = isHuman;
         }
 
         @Override

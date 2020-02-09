@@ -10,22 +10,17 @@
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/main_puzzleBar"/>
+        android:layout_above="@id/main_progressBar">
 
-    <LinearLayout
-        android:id="@+id/main_puzzleBar"
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/main_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PUZZLE GOES HERE"
-            android:textAlignment="center"
-            android:textSize="30sp" />
-
-    </LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:progressTint="@color/colorPrimary" />
 
 </RelativeLayout>

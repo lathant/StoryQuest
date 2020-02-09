@@ -4,10 +4,12 @@ import uottahack2020.autism.ActivityId;
 import uottahack2020.autism.fragment.FragmentId;
 
 public abstract class Roadblock {
+    private Quest quest;
     private String situationText;
-    protected boolean completed;
+    private boolean completed;
 
-    Roadblock(String situationText) {
+    Roadblock(Quest quest, String situationText) {
+        this.quest = quest;
         this.situationText = situationText;
     }
 
@@ -27,5 +29,6 @@ public abstract class Roadblock {
 
     public void forceComplete() {
         completed = true;
+        quest.advance();
     }
 }

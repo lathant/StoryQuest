@@ -137,9 +137,9 @@ public class ConversationCtrl implements FragmentCtrl {
             return;
         }
 
-        if (conversation.pushCurrentQuestion()) {
-            editMessage.setEnabled(true);
-        }
+        conversation.pushCurrentQuestion();
+        editMessage.setEnabled(true);
+
         editMessage.setText("");
 
         observableChatHistory.clear();

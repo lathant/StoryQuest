@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:showIn="@layout/activity_main">
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/quest_btnPuzzle1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/puzzle_piece_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Challenge 1"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/quest_btnPuzzle2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/puzzle_piece_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Challenge 2"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/quest_btnPuzzle3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/puzzle_piece_yellow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Challenge 3"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
 
 </LinearLayout>

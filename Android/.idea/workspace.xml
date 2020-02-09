@@ -10,11 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c078142-4766-4607-b85c-a24d869f659e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/StoryCtrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/StoryFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_story.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Activity_Story.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/QuestCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/QuestCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Emoji.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Emoji.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Roadblock.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Roadblock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Story.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_quest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_quest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EnterPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PuzzlePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UmaiTestFeb8/app/src/main/res/drawable/activity_btn_story_option_a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/activity_btn_story_option_a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UmaiTestFeb8/app/src/main/res/drawable/activity_textbox_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/activity_textbox_back.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UmaiTestFeb8/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UmaiTestFeb8/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UmaiTestFeb8/app/src/main/res/mipmap-hdpi/shakira.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/shakira.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../activity_splash.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +49,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="RQ3006SHPR" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_27" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -40,22 +60,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/QuestFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/StoryFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+            <state relative-caret-position="194">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -63,71 +80,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
-              <folding>
-                <element signature="e#1553#1583#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="92">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/StoryCtrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state relative-caret-position="291">
+              <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#427:1277" />
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1119#1120#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1266#1267#0" expanded="true" />
-                <element signature="class#265:1297" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-                <element signature="e#1107#1108#0" expanded="true" />
-                <element signature="e#1166#1167#0" expanded="true" />
-                <element signature="e#1234#1235#0" expanded="true" />
-                <element signature="e#1286#1287#0" expanded="true" />
-                <element signature="class#2612:2960" />
-                <element signature="class#2773:3107" />
-                <element signature="e#3036#3037#0" expanded="true" />
-                <element signature="e#3071#3072#0" expanded="true" />
-                <element signature="e#3168#3169#0" expanded="true" />
-                <element signature="e#3223#3224#0" expanded="true" />
+                <element signature="e#2468#2469#0" expanded="true" />
+                <element signature="e#2502#2503#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
-              <folding>
-                <element signature="e#6214#6215#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationMarker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/MarkerTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -135,41 +102,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="70" column="56" lean-forward="true" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+            <state relative-caret-position="153">
+              <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1515#1516#0" expanded="true" />
-                <element signature="e#1564#1565#0" expanded="true" />
-                <element signature="e#1868#1869#0" expanded="true" />
-                <element signature="e#1902#1903#0" expanded="true" />
-                <element signature="e#3933#3934#0" expanded="true" />
-                <element signature="e#3968#3969#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/RecyclerAdapter.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="70" column="46" lean-forward="true" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+            <state relative-caret-position="144">
+              <caret line="136" column="39" lean-forward="true" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4210#4211#0" expanded="true" />
+                <element signature="e#4256#4257#0" expanded="true" />
+                <element signature="e#4662#4663#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_conversation.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="163" column="32" lean-forward="true" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+              <folding>
+                <element signature="e#6195#6196#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="215">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -177,9 +162,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -192,10 +177,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/LoginFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/ActionPoint.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Emoji.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Roadblock.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/RecyclerCard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/QuestCtrl.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_card_situation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_conversation_bubble.xml" />
@@ -208,19 +190,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/RecyclerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationBubble.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/Session.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Quest.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_conversation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Story.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/Marker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationMarker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/MarkerTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_u.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Emoji.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_story.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/QuestCtrl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Roadblock.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_quest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Story.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/StoryCtrl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/StoryFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Quest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java" />
       </list>
     </option>
   </component>
@@ -236,6 +226,54 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="uOttaHack Autism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="uOttaHack Autism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="uOttaHack Autism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uOttaHack Autism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uOttaHack Autism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uOttaHack Autism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="autism" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -278,14 +316,13 @@
             <path>
               <item name="uOttaHack Autism" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="autism" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="uOttaHack Autism" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="uOttaHack Autism" type="1abcf292:AndroidViewProjectNode" />
@@ -297,15 +334,18 @@
               <item name="uOttaHack Autism" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="uOttaHack Autism" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,13 +362,18 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="debug" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Victor\GitHub\uOttaHack-autism\Android\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\Victor\GitHub\uOttaHack-autism\Android\app\src\main\res\mipmap-xxxhdpi" />
+      <recent name="C:\Users\Victor\GitHub\uOttaHack-autism\Android\app\src\main\res\layout" />
+    </key>
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="uottahack2020.autism.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="uottahack2020.autism.util" />
       <recent name="uottahack2020.autism.controller" />
       <recent name="uottahack2020.autism.fragment" />
+      <recent name="uottahack2020.autism.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Victor\GitHub\uOttaHack-autism\Android\app\src\main\res\anim" />
@@ -427,31 +472,31 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Resources Explorer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" visible="true" weight="0.22510122" />
-      <window_info id="Image Layers" />
-      <window_info id="Structure" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" weight="0.94671404" />
-      <window_info anchor="bottom" id="Android Profiler" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Find" weight="0.3285968" />
-      <window_info anchor="bottom" id="Logcat" weight="0.3285968" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3285968" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Preview" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Build Variants" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.21133603" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Structure" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="0" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.3268206" />
+      <window_info anchor="bottom" id="Android Profiler" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Logcat" order="5" weight="0.3285968" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3285968" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.3285968" />
+      <window_info anchor="bottom" id="Debug" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Device File Explorer" order="2" side_tool="true" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Preview" order="5" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -465,46 +510,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/appbar_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/LoginFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/appbar_layout.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/LoginFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Emoji.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_quest.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Volley/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -523,50 +540,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Roadblock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/QuestCtrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_conversation_botbubble.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/Splash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_conversation_humanbubble.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="-57">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/util/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -575,9 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/anim.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/anim.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/RecyclerCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -585,32 +571,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Quest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_conversation.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -618,44 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Story.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/QuestFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,73 +623,219 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/activity_splash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+        <state relative-caret-position="96">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/Activity_Story.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/EnterPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/PuzzlePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/puzzle_piece.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Emoji.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#427:1277" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-            <element signature="class#265:1297" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="e#1286#1287#0" expanded="true" />
-            <element signature="class#2612:2960" />
-            <element signature="class#2773:3107" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3071#3072#0" expanded="true" />
-            <element signature="e#3168#3169#0" expanded="true" />
-            <element signature="e#3223#3224#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_u.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="70" column="56" lean-forward="true" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/QuestCtrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1564#1565#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-            <element signature="e#3933#3934#0" expanded="true" />
-            <element signature="e#3968#3969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/QuestFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-230">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_story.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_quest.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Story.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Roadblock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="163" column="32" lean-forward="true" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+          <folding>
+            <element signature="e#6195#6196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/StoryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Quest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/StoryCtrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding>
+            <element signature="e#2468#2469#0" expanded="true" />
+            <element signature="e#2502#2503#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+        <state relative-caret-position="357">
+          <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/fragment/ConversationFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/Conversation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+        <state relative-caret-position="153">
+          <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
           <folding>
-            <element signature="e#1553#1583#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/controller/ConversationCtrl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/uottahack2020/autism/model/DefaultQuest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        <state relative-caret-position="144">
+          <caret line="136" column="39" lean-forward="true" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
           <folding>
-            <element signature="e#6214#6215#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+            <element signature="e#4256#4257#0" expanded="true" />
+            <element signature="e#4662#4663#0" expanded="true" />
           </folding>
         </state>
       </provider>

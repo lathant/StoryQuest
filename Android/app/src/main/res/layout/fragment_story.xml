@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgDarker"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/story_txtEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:textSize="65dp"
+            tools:text="😃" />
+
+        <TextView
+            android:id="@+id/story_txtSituation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            tools:text="Billy practiced for his race for a month. Today, he won an award for 1st place. How does Billy feel?" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/story_btnOption1"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:background="@color/colorAccent"
+                android:textSize="24sp"
+                tools:text="Upset" />
+
+            <Button
+                android:id="@+id/story_btnOption2"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="50dp"
+                android:background="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:text="Bored" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/story_btnOption3"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:background="@color/colorSecondaryLight"
+                android:textSize="24sp"
+                tools:text="Happy" />
+
+            <Button
+                android:id="@+id/story_btnOption4"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="50dp"
+                android:background="#66bb6a"
+                android:textSize="24sp"
+                tools:text="Neutral" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/story_panelHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBgDarker"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect : Here's a hint"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/story_txtHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            tools:text="His practice was not easy; so he was feeling positive after he won" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,19 +1,28 @@
 package uottahack2020.autism.model;
 
+import android.widget.ProgressBar;
+
 import uottahack2020.autism.ActivityId;
 import uottahack2020.autism.fragment.FragmentId;
 
 public class DefaultQuest implements Quest {
+    private final int challengesToComplete = 3;
+
     private ActionPoint[] actionPoints;
     private int currentActionPoint;
+    private int challengesCompleted;
+
+    private ProgressBar progressBar;
 
     public DefaultQuest() {
         actionPoints = new ActionPoint[0];
         currentActionPoint = -1;
+        challengesCompleted = 0;
     }
 
     public void init() {
         Conversation conversation1 = new Conversation(
+                this,
                 "Someone at school has lost their toy. Put your empathy skill to the test!") {
             @Override
             public String getName() {
@@ -38,6 +47,7 @@ public class DefaultQuest implements Quest {
                 }));
 
         Story story1 = new Story(
+                this,
                 "Billy practiced for his race for a month. " +
                         "Today, he won an award for 1st place. How does Billy feel?",
                 Emoji.HAPPY_FACE,
@@ -66,23 +76,23 @@ public class DefaultQuest implements Quest {
                 new ActionPoint() {
                     @Override
                     public Roadblock getRoadBlock() {
-                        return conversation1;
-                    }
-
-                    @Override
-                    public boolean isCompleted() {
-                        return conversation1.isComplete();
-                    }
-                },
-                new ActionPoint() {
-                    @Override
-                    public Roadblock getRoadBlock() {
                         return story1;
                     }
 
                     @Override
                     public boolean isCompleted() {
                         return story1.isComplete();
+                    }
+                },
+                new ActionPoint() {
+                    @Override
+                    public Roadblock getRoadBlock() {
+                        return conversation1;
+                    }
+
+                    @Override
+                    public boolean isCompleted() {
+                        return conversation1.isComplete();
                     }
                 }
         };
@@ -95,7 +105,36 @@ public class DefaultQuest implements Quest {
     }
 
     @Override
-    public ActionPoint currentActionPoint() {
-        return actionPoints[currentActionPoint];
+    public <T extends Roadblock> ActionPoint findActionPoint(Class<T> type) {
+        for (ActionPoint actionPoint : actionPoints) {
+            try {
+                actionPoint.getRoadBlock().getClass().asSubclass(type);
+                if (actionPoint.isCompleted()) {
+                    init();
+                    return findActionPoint(type);
+                } else {
+                    return actionPoint;
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void advance() {
+        currentActionPoint++;
+        challengesCompleted = Math.min(challengesCompleted + 1, challengesToComplete);
+        System.out.println("COMPLETEION PERCENT " + challengesCompleted + " " + getCompletionPercent());
+        progressBar.setProgress(Math.max(getCompletionPercent(), 10));
+    }
+
+    @Override
+    public void setProgressBar(ProgressBar progressBar) {
+        this.progressBar = progressBar;
+    }
+
+    public int getCompletionPercent() {
+        return (challengesCompleted * 100) / challengesToComplete;
     }
 }

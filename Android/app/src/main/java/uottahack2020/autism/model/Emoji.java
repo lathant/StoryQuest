@@ -11,4 +11,12 @@ public enum Emoji {
         this.emoji = emoji;
         this.emoticon = emoticon;
     }
+
+    public String getEmoji() {
+        return emoji;
+    }
+
+    public String getEmoticon() {
+        return emoticon;
+    }
 }

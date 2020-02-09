@@ -43,7 +43,7 @@ public class ConversationFragment extends Fragment<ConversationCtrl> {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        controller.setConversation((Conversation) Session.CURRENT_QUEST.currentActionPoint().getRoadBlock());
+        controller.setConversation((Conversation) Session.CURRENT_QUEST.findActionPoint(Conversation.class).getRoadBlock());
         controller.init(view);
 
         RecyclerView chatsRecycler = view.findViewById(R.id.conversation_recyclerView);

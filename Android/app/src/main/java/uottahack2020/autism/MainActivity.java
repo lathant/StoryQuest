@@ -2,6 +2,7 @@ package uottahack2020.autism;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ProgressBar;
 
 import androidx.fragment.app.FragmentManager;
 import uottahack2020.autism.fragment.ConversationFragment;
@@ -9,6 +10,7 @@ import uottahack2020.autism.fragment.Fragment;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.fragment.FragmentId;
 import uottahack2020.autism.fragment.QuestFragment;
+import uottahack2020.autism.fragment.StoryFragment;
 import uottahack2020.autism.model.DefaultQuest;
 
 public class MainActivity extends FragmentActivity {
@@ -27,15 +29,19 @@ public class MainActivity extends FragmentActivity {
         Log.d(TAG, "Launching");
 
         QuestFragment.setupId(getActivityId());
+        StoryFragment.setupId(getActivityId());
         ConversationFragment.setupId(getActivityId());
 
         DefaultQuest defaultQuest = new DefaultQuest();
         defaultQuest.init();
 
+        ProgressBar progressBar = findViewById(R.id.main_progressBar);
+        progressBar.setProgress(10);
+        defaultQuest.setProgressBar(progressBar);
+
         Session.CURRENT_QUEST = defaultQuest;
 
         pushFragment(FragmentId.GET(QuestFragment.TAG));
-        pushFragment(FragmentId.GET(ConversationFragment.TAG));
     }
 
     @Override
