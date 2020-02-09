@@ -1,2 +1,4 @@
-build/
 Android/app/build/
+node_modules/
+.vscode/
+WebAPI/.env
