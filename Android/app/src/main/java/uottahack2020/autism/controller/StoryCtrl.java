@@ -9,11 +9,11 @@ import java.util.List;
 import uottahack2020.autism.R;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.fragment.FragmentId;
-import uottahack2020.autism.fragment.StoryFragment;
 import uottahack2020.autism.model.Story;
 
 public class StoryCtrl implements FragmentCtrl {
     private FragmentActivity activity;
+    private String fragmentTag;
     private Story story;
 
     private TextView txtEmoji;
@@ -25,8 +25,9 @@ public class StoryCtrl implements FragmentCtrl {
     private Button btnOption4;
     private View panelHint;
 
-    public StoryCtrl(FragmentActivity activity) {
+    public StoryCtrl(FragmentActivity activity, String fragmentTag) {
         this.activity = activity;
+        this.fragmentTag = fragmentTag;
     }
 
     @Override
@@ -78,8 +79,7 @@ public class StoryCtrl implements FragmentCtrl {
             panelHint.setVisibility(View.VISIBLE);
         } else {
             option.getStory().forceComplete();
-            activity.popFragment(FragmentId.GET(StoryFragment.TAG));
-            activity.overridePendingTransition(R.anim.trans_top_in, R.anim.trans_bottom_out);
+            activity.popFragment(FragmentId.GET(fragmentTag));
         }
         updateInfo();
     }

@@ -2,7 +2,9 @@ package uottahack2020.autism.model;
 
 public enum Emoji {
 
-    HAPPY_FACE("😃", ":D");
+    HAPPY_FACE("😃", ":D"),
+    BOY("👦", ":boy:"),
+    GIRL("👧", ":girl:");
 
     private String emoji;
     private String emoticon;

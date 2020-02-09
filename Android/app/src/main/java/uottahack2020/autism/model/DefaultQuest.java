@@ -50,7 +50,7 @@ public class DefaultQuest implements Quest {
                 this,
                 "Billy practiced for his race for a month. " +
                         "Today, he won an award for 1st place. How does Billy feel?",
-                Emoji.HAPPY_FACE,
+                Emoji.BOY,
                 new Story.Option(false, "Upset", "Hint: Think of the opposite of being upset"),
                 new Story.Option(false, "Bored", "Not quite -- he was looking forward to this race all month!"),
                 new Story.Option(true, "Happy", "Billy feels accomplished; he is happy that his hard work paid off"),
@@ -64,6 +64,32 @@ public class DefaultQuest implements Quest {
             @Override
             public String getName() {
                 return "Billy and the Race";
+            }
+
+            @Override
+            public String getDescription() {
+                return "description";
+            }
+        };
+
+        SecondStory story2 = new SecondStory(
+                this,
+                "Tanya went to the store to buy bread. Somebody pushed her when she was in line, and she fell. " +
+                        "The bread dropped on the floor and she started to cry. How does she feel?",
+                Emoji.GIRL,
+                new Story.Option(false, "Confused", "Not quite -- she started crying so she must be more than just confused"),
+                new Story.Option(true, "Embarrassed", "Because she feel and dropped the break in-front of everyone"),
+                new Story.Option(false, "Indifferent", "She lost what she came to buy from the bakery and this is not something that she expected to happen"),
+                new Story.Option(false, "Joyful", "If she was crying, think of the opposite of being joyful")) {
+
+            @Override
+            public FragmentId getFragmentId(ActivityId activityId) {
+                return null; //todo
+            }
+
+            @Override
+            public String getName() {
+                return "Dropped the bread";
             }
 
             @Override
@@ -93,6 +119,17 @@ public class DefaultQuest implements Quest {
                     @Override
                     public boolean isCompleted() {
                         return conversation1.isComplete();
+                    }
+                },
+                new ActionPoint() {
+                    @Override
+                    public Roadblock getRoadBlock() {
+                        return story2;
+                    }
+
+                    @Override
+                    public boolean isCompleted() {
+                        return story2.isComplete();
                     }
                 }
         };
@@ -136,5 +173,12 @@ public class DefaultQuest implements Quest {
 
     public int getCompletionPercent() {
         return (challengesCompleted * 100) / challengesToComplete;
+    }
+
+    public abstract class SecondStory extends Story {
+
+        protected SecondStory(Quest quest, String situationText, Emoji avatar, Option... options) {
+            super(quest, situationText, avatar, options);
+        }
     }
 }

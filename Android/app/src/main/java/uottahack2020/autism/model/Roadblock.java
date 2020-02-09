@@ -28,6 +28,7 @@ public abstract class Roadblock {
     }
 
     public void forceComplete() {
+        if (completed) return;
         completed = true;
         quest.advance();
     }

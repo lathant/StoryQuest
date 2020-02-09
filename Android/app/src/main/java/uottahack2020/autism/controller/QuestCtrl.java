@@ -6,6 +6,7 @@ import uottahack2020.autism.R;
 import uottahack2020.autism.fragment.ConversationFragment;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.fragment.FragmentId;
+import uottahack2020.autism.fragment.Story2Fragment;
 import uottahack2020.autism.fragment.StoryFragment;
 import uottahack2020.autism.model.DefaultQuest;
 import uottahack2020.autism.model.Quest;
@@ -28,8 +29,7 @@ public class QuestCtrl implements FragmentCtrl {
             activity.pushFragment(FragmentId.GET(ConversationFragment.TAG), R.anim.trans_bottom_in, R.anim.trans_top_out, R.anim.trans_top_in, R.anim.trans_bottom_out);
         });
         view.findViewById(R.id.quest_btnPuzzle3).setOnClickListener(v -> {
-//          activity.pushFragment(FragmentId.GET(ConversationFragment.TAG));
-//            activity.overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
+            activity.pushFragment(FragmentId.GET(Story2Fragment.TAG), R.anim.trans_bottom_in, R.anim.trans_top_out, R.anim.trans_top_in, R.anim.trans_bottom_out);
         });
 
         quest.init();

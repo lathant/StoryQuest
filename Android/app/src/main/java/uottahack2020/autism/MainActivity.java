@@ -11,6 +11,7 @@ import uottahack2020.autism.fragment.Fragment;
 import uottahack2020.autism.fragment.FragmentActivity;
 import uottahack2020.autism.fragment.FragmentId;
 import uottahack2020.autism.fragment.QuestFragment;
+import uottahack2020.autism.fragment.Story2Fragment;
 import uottahack2020.autism.fragment.StoryFragment;
 import uottahack2020.autism.model.DefaultQuest;
 
@@ -31,6 +32,7 @@ public class MainActivity extends FragmentActivity {
 
         QuestFragment.setupId(getActivityId());
         StoryFragment.setupId(getActivityId());
+        Story2Fragment.setupId(getActivityId());
         ConversationFragment.setupId(getActivityId());
 
         DefaultQuest defaultQuest = new DefaultQuest();

@@ -37,6 +37,9 @@ public class Splash extends AppCompatActivity {
                     overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
                 }
             });
+            Intent transIntent = new Intent(Splash.this, MainActivity.class);
+            startActivity(transIntent);
+            overridePendingTransition(R.anim.trans_bottom_in, R.anim.trans_top_out);
         }, SPLASH_TIME_OUT);
 
 
